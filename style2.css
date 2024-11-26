@@ -1,0 +1,31 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  background: url('https://www.transparenttextures.com/patterns/bright-squares.png'), linear-gradient(to bottom, #ff6961, #ffe680);
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #d32f2f;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.8;
+  color: #444;
+}
+
+.letter {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  max-width: 600px;
+}

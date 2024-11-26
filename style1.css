@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #00203FFF, #ADEFD1FF);
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.tree-container {
+  position: relative;
+  margin: 20px auto;
+  width: 800px;
+  height: 1200px;
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10%;
+  animation: fall 10s infinite linear;
+  opacity: 0.8;
+}
+
+.snowflake:nth-child(odd) {
+  animation-duration: 8s;
+}
+
+.snowflake:nth-child(even) {
+  animation-duration: 12s;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.tree {
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+}
+
+.tree .triangle {
+  position: absolute;
+  background-color: #1E6C32;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.tree .triangle:nth-child(1) {
+  width: 200px;
+  height: 150px;
+  top: 0;
+  left: 50px;
+}
+
+.tree .triangle:nth-child(2) {
+  width: 250px;
+  height: 180px;
+  top: 120px;
+  left: 25px;
+  background-color: #297D41;
+}
+
+.tree .triangle:nth-child(3) {
+  width: 300px;
+  height: 200px;
+  top: 240px;
+  left: 0;
+  background-color: #30894F;
+}
+
+.tree .trunk {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background-color: #8B4513;
+  bottom: 0;
+  left: 120px;
+}
+
+.tree .bauble {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.tree .bauble:nth-child(n+4):nth-child(-n+15) {
+  width: 15px;
+  height: 15px;
+}
+
+.tree .bauble:nth-child(4) { background-color: red; top: 20px; left: 70px; }
+.tree .bauble:nth-child(5) { background-color: blue; top: 50px; left: 130px; }
+.tree .bauble:nth-child(6) { background-color: yellow; top: 90px; left: 40px; }
+.tree .bauble:nth-child(7) { background-color: orange; top: 130px; left: 180px; }
+.tree .bauble:nth-child(8) { background-color: white; top: 200px; left: 90px; }
+.tree .bauble:nth-child(9) { background-color: purple; top: 230px; left: 30px; }
+.tree .bauble:nth-child(10) { background-color: pink; top: 260px; left: 220px; }
+
+/* Additional baubles */
+.tree .bauble:nth-child(17) { background-color: gold; top: 70px; left: 100px; }
+.tree .bauble:nth-child(18) { background-color: green; top: 190px; left: 150px; }
+.tree .bauble:nth-child(19) { background-color: silver; top: 140px; left: 60px; }
+.tree .bauble:nth-child(20) { background-color: red; top: 250px; left: 170px; }
+
+/* Garlands */
+.tree .garland {
+  position: absolute;
+  height: 5px;
+  background-color: gold;
+  border-radius: 5px;
+}
+
+.tree .garland:nth-child(21) { width: 180px; top: 100px; left: 60px; transform: rotate(-10deg); }
+.tree .garland:nth-child(22) { width: 220px; top: 180px; left: 40px; transform: rotate(10deg); }
+.tree .garland:nth-child(23) { width: 260px; top: 270px; left: 20px; transform: rotate(-5deg); }
+
+/* Christmas Lights */
+.tree .light {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #FFD700;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+.tree .light:nth-child(24) { top: 60px; left: 80px; }
+.tree .light:nth-child(25) { top: 140px; left: 50px; }
+.tree .light:nth-child(26) { top: 210px; left: 100px; }
+.tree .light:nth-child(27) { top: 180px; left: 190px; }
+.tree .light:nth-child(28) { top: 120px; left: 150px; }
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Candy Canes */
+.tree .candy-cane {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.tree .candy-cane:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: red;
+  top: 0;
+  left: 0;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.tree .candy-cane:nth-child(29) { top: 50px; left: 50px; transform: rotate(20deg); }
+.tree .candy-cane:nth-child(30) { top: 150px; left: 180px; transform: rotate(-20deg); }
+
+/* Gifts */
+.tree .gift {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background-color: red;
+  border-radius: 5px;
+  bottom: -50px;
+  left: 20px;
+}
+
+.tree .gift:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: yellow;
+  left: 20px;
+}
+
+.tree .gift:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  background-color: yellow;
+  top: 15px;
+}
+
+.tree .gift:nth-child(31) {
+  background-color: blue;
+  bottom: -50px;
+  left: 200px;
+}
